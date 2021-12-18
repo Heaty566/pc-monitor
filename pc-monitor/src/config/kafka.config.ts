@@ -1,7 +1,7 @@
 import { KafkaOptions, Transport } from '@nestjs/microservices';
 import { monoEnum } from 'mono-utils-core';
 
-const config = {
+export const config = {
   brokerAddress:
     process.env.NODE_ENV === monoEnum.NODE_ENV_MODE.DEVELOPMENT
       ? 'localhost:29092'
@@ -9,7 +9,7 @@ const config = {
   clientUrl:
     process.env.NODE_ENV === monoEnum.NODE_ENV_MODE.DEVELOPMENT
       ? 'http://localhost:3000'
-      : '128.199.174.71:13001',
+      : 'http://128.199.174.71:13001',
 };
 console.log(config);
 export const kafkaOptions: KafkaOptions = {

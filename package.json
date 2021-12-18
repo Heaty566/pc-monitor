@@ -4,6 +4,6 @@
         "main": "index.js",
         "license": "MIT",
         "scripts": {
-                "start:consumer": "bash ./scripts/run-producer.sh"
+                "start:producer": "bash ./scripts/run-producer.sh"
         }
 }

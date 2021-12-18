@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { kafkaOptions } from './config/kafka.config';
+import { config, kafkaOptions } from './config/kafka.config';
 import { monoLogger } from 'mono-utils-core';
 import { NextFunction } from 'express';
 import { Request, Response } from 'express';
@@ -9,7 +9,7 @@ const NS = 'app-main';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('/api');
-  app.enableCors({ origin: 'http://localhost:3000', credentials: true });
+  app.enableCors({ origin: config.clientUrl, credentials: true });
   app.connectMicroservice(kafkaOptions);
   app.use((req: Request, res: Response, next: NextFunction) => {
     //set header
