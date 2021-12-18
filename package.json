@@ -1,0 +1,9 @@
+{
+        "name": "pc-monitor",
+        "version": "1.0.0",
+        "main": "index.js",
+        "license": "MIT",
+        "scripts": {
+                "start:consumer": "bash ./scripts/run-producer.sh"
+        }
+}

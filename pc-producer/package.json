@@ -1,0 +1,19 @@
+{
+        "name": "pc-producer",
+        "version": "1.0.0",
+        "main": "index.js",
+        "license": "MIT",
+        "scripts": {
+                "start:dev": "NODE_ENV=development DEBUG=app-* node index.js",
+                "start": "NODE_ENV=production DEBUG=app-* node index.js"
+        },
+        "dependencies": {
+                "bluebird": "^3.7.2",
+                "kafka": "^0.2.3",
+                "kafkajs": "^1.15.0",
+                "lodash": "^4.17.21",
+                "mono-utils-core": "^0.7.0",
+                "os-utils": "^0.0.14",
+                "uuid": "^8.3.2"
+        }
+}
